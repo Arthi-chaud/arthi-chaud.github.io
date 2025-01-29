@@ -14,7 +14,7 @@ timezone: Europe/Paris
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Arthi-chaud's Blog # the main title
+title: Arthi-chaud # the main title
 
 tagline: Computer Science PhD Student and Music maniac
 
@@ -210,9 +210,3 @@ exclude:
   - rollup.config.js
   - "package*.json"
 
-jekyll-archives:
-  enabled: [tags]
-  layouts:
-    tag: tag
-  permalinks:
-    tag: /tags/:name/
