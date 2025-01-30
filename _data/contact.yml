@@ -7,3 +7,7 @@
 - type: linkedin
   icon: 'fab fa-linkedin'
   url:  'https://www.linkedin.com/in/arthur-jamet/'
+
+- type: rss
+  icon: "fas fa-rss"
+  noblank: true
