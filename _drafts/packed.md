@@ -28,6 +28,7 @@ However, no languages support packed data natively. Haskell does support compact
 Unfortunately it looks like the use of packed data is limited to research projects, probably because it's kinda hard to support it.
 
 In this post, I will introduce the `packed-data` Haskell library. It allows packing and unpacking data, as well as traversing packed data as-is (with a custom `case` function), with no marshalling step, thanks to the power of types.
+As far as we are aware, this is on of the first effort to bring support for packed data using only the host language's type-system, meta-programming (Template Haskell) with no compiler modifications.
 
 This blog post is a short version of the paper published at ECOOP 2025, titled _Type-safe and portable support for packed data_.
 
@@ -164,6 +165,17 @@ instance (Unpackable a) => Unpackable (Tree a) where
 
 In the second lambda, we don't need to pass parameter to the two `read`s, because the first one changes the 'state' of the reading computation, and has shifted the pointer to the next subtree in the packed `Node`.
 
+### Indirections
+
+One common challenge with packed data is to access a field in a packed data structure. Since all fields are inlined, we cannot predict the position in the buffer of a given field, as the preceding one may not have a fixed size (in the case of a recursive data structure, like a tree).
+
+Thus, there are two ways to access a field:
+
+- Traversing the preceding one. This can lead to dramatic performance issues if that preceding field is big.
+- Prefix each field with an indirection, a number that gives the size of the field it precedes. They allow us to skip over a field though a simple pointer shift. In`packed-data`, we call them `FieldSize`.
+
+When building packed data, the library automatically inserts these indirections and modifies the signature of the `case` function so that its `PackedReader` know that there are `FieldSize` intersperced in the buffer.
+
 ### Examples
 
 You can find examples of tree traversals in the [package's repository](https://github.com/Arthi-chaud/packed-data).
@@ -198,3 +210,13 @@ It did speed up the traversal (30% faster than the `PackedReader`), but is still
 This confirms that there is a computing overhead causes by our monadic abstraction of pointer manipulation. 
 
 ## Future work and conclusion 
+
+Ok, so using only a library, with no compiler modifications, we somewhat managed to leverage the speed-ups allowed by packed data.
+However, because of it's shallow embedding (i.e. it's just a library), we suffer from performance overhead, which can hardly be bypassed without changing the compiler.
+
+A solution would be to rewrite the library so that `PackedReader` generates an AST, which would be used to generate C call. Then, using Template Haskell, we could inject an FFI call back into the Haskell code.
+This would allow us to avoid the computing overhead caused by our monadic approach.
+
+I only rely on types to ensure the correctness of reading operations on packed data. I am actually curious to see if this library-based approach would work on other strongly-typed languages like Rust, Scala or maybe even TypeScript.
+
+I talked about servers and clients in the introduction. For web services, it's common to use JSON. It would be interesting to see if it is possible to use a JSON byte string as-is on the client-side, without the need for a deserialisation step, using a strongly-types interface like in `packed-data`.
