@@ -15,8 +15,8 @@ I fell into the system configuration world, and carry my dotfiles everywhere I g
 
 Using neovim, btw :)
 
-You can find my socials somewhere at in the navigation bar. Feel free to reach out!
+You can find my socials somewhere at the bottom of the navigation bar. Feel free to reach out!
 
-Oh and you can find by CV [here](https://github.com/Arthi-chaud/Curriculum-Vitae/releases)
+Oh and you can find my CV [here](https://github.com/Arthi-chaud/Curriculum-Vitae/releases)
 
 Cheers!
