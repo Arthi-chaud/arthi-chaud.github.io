@@ -1,9 +1,11 @@
 <style>
-  ul li::marker {
-    content: "⚙️ " !important;
+  div[class=content] ul:has(li) {
+    list-style: "⚙️ " !important;
+
   }
 
-  ol li::marker {
-    content: "🌠 " !important;
+  div[class=content] ol:has(li) {
+    list-style: "🌠 " !important;
+
   }
 </style>
