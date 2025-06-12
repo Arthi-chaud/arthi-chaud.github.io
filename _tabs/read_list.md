@@ -8,6 +8,12 @@ order: 4
 
 ## 2025
 
+- Classic Shell Scripting
+: Arnold Robbins & Nelson Beebe, 2005
+
+- Introduction to Operating Systems
+: John English, 2005
+
 - CSS: The Definitive Guide
 : Eric A. Meyer, 2006 (Third Edition)
 
@@ -68,10 +74,7 @@ order: 4
 - Programming Language Foundations in Agda
 : Philip Wadler, Wen Kokke & Jeremy G. Siek, 2022 ([GitHub Pages](https://plfa.github.io))
 
-## Waiting on my bedside table…
-
-- Introduction to Operating Systems
-: John English, 2005
+<!-- ## Waiting on my bedside table… -->
 
 ## Other Notable reads
 
