@@ -4,9 +4,10 @@ title: Reading list
 order: 4
 ---
 
-
-
 ## 2025
+
+0. The Last Kingdom (Vol. 1)
+: Bernard Cornwell, 2004
 
 - Classic Shell Scripting
 : Arnold Robbins & Nelson Beebe, 2005
