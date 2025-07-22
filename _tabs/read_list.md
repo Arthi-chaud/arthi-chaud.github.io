@@ -6,6 +6,12 @@ order: 4
 
 ## 2025
 
+0. Persepolis (Full series)
+: Marjane Satrapi, 2000
+
+0. The War of the Worlds
+: H. G. Wells, 1898
+
 0. The Last Kingdom (Vol. 1)
 : Bernard Cornwell, 2004
 
