@@ -6,6 +6,9 @@ order: 4
 
 ## 2025
 
+0. The Great Gatsby
+: Francis Scott Fitzgerald, 1925
+
 0. Pride and Prejudice 
 : Jane Austen, 1813
 
