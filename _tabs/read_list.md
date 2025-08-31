@@ -6,6 +6,9 @@ order: 4
 
 ## 2025
 
+0. The Armour of Light
+: Ken Follett, 2023
+
 0. The Great Gatsby
 : Francis Scott Fitzgerald, 1925
 
