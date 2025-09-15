@@ -30,7 +30,6 @@ github:
 twitter:
   username: arthi_chaud
 
-
 social:
   name: Arthur J.
   links:
@@ -211,3 +210,5 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+plugins:
+  - jemoji
