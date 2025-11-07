@@ -14,7 +14,7 @@ timezone: Europe/Paris
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Arthi-chaud # the main title
+title: Arthur Jamet # the main title
 
 tagline: PhD Student in Computer Science and Music maniac
 
@@ -31,7 +31,7 @@ twitter:
   username: arthi_chaud
 
 social:
-  name: Arthur J.
+  name: Arthur Jamet
   links:
     - https://github.com/Arthi-chaud
     - https://x.com/arthi_chaud
