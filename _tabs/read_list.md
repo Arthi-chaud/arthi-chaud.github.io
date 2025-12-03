@@ -6,6 +6,8 @@ order: 4
 
 ## 2025
 
+0. The Evening and the Morning
+: Ken Follett, 2020
 
 0. Digital Fortress 
 : Dan Brown, 1998
