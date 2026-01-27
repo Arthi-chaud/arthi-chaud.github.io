@@ -6,6 +6,12 @@ order: 4
 
 ## 2025
 
+0. The Picture of Dorian Gray
+: Oscar Wilde, 1890
+
+0. The Handmaid's Tale
+: Margaret Atwood, 1985
+
 0. Sense and Sensibility 
 : Jane Austen, 1811
 
