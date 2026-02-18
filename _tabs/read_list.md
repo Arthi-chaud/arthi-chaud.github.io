@@ -4,13 +4,21 @@ title: Reading list
 order: 4
 ---
 
-## 2025
+## 2026
+
+- Real World OCaml
+: Yaron Minsky, Anil Madhavapeddy & Jason Hickey, 2013
+
+- Functional Programming in F#
+: Michael R. Hansen, Hans Rischel, 2013
 
 0. The Picture of Dorian Gray
 : Oscar Wilde, 1890
 
 0. The Handmaid's Tale
 : Margaret Atwood, 1985
+
+## 2025
 
 0. Sense and Sensibility 
 : Jane Austen, 1811
