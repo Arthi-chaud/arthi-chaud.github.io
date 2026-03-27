@@ -6,6 +6,9 @@ order: 4
 
 ## 2026
 
+0. Emma
+: Jane Austen, 1815
+
 - Real World OCaml
 : Yaron Minsky, Anil Madhavapeddy & Jason Hickey, 2013
 
