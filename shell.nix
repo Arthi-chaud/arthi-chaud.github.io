@@ -3,7 +3,7 @@
 }:
 pkgs.mkShell {
   packages = with pkgs; [
-    ruby_3_4
+    ruby
     jekyll
   ];
 }
