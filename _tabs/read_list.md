@@ -6,6 +6,9 @@ order: 4
 
 ## 2026
 
+0. Wuthering Heights
+: Emily Brontë, 1847
+
 0. The Lost Symbol
 : Dan Brown, 2009
 
