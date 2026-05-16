@@ -6,6 +6,9 @@ order: 4
 
 ## 2026
 
+- Kinect Open Source Programming Secrets
+: Andrew Davison, 2012
+
 0. Wuthering Heights
 : Emily Brontë, 1847
 
