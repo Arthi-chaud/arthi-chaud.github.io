@@ -5,7 +5,7 @@ tags: [Haskell]
 description: Using Template Haskell to derive the structure of records and simulate structural subtyping
 ---
 
-_Code available on [GitHub](https://github.com/Arthi-chaud/type-machine), package available on [Hackage](https://hackage.haskell.org/package/type-machine)._
+**Note**: A paper about this project has been accepted at GPCE 2026, and can be accessed [here](https://dl.acm.org/doi/10.1145/3814885.3816408). Code available on [GitHub](https://github.com/Arthi-chaud/type-machine), package available on [Hackage](https://hackage.haskell.org/package/type-machine).
 
 ## Introduction
 
