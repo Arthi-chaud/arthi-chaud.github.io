@@ -6,6 +6,9 @@ order: 4
 
 ## 2026
 
+0. The Count of Monte Cristo
+: Alexandre Dumas, 1846
+
 - Kubernetes In Action
 : Marko Lukša, 2017
 
