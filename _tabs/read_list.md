@@ -6,6 +6,10 @@ order: 4
 
 ## 2026
 
+
+0. Cards on the Table
+: Agatha Christie, 1936
+
 0. Call Me By Your Name
 : André Aciman, 2007
 
