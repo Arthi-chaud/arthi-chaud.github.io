@@ -212,3 +212,9 @@ jekyll-archives:
     category: /categories/:name/
 plugins:
   - jemoji
+  - jekyll/scholar
+scholar:
+  source: ./
+  bibliography: publications.bib
+  style: apa
+  bibliography_template: bib

@@ -17,6 +17,8 @@ I fell into the system configuration world, and carry my dotfiles everywhere I g
 
 You can find my socials somewhere at the bottom of the navigation bar. Feel free to reach out!
 
-Oh and you can find my CV [here](https://github.com/Arthi-chaud/Curriculum-Vitae/releases)
+Oh and you can find my CV [here](https://github.com/Arthi-chaud/Curriculum-Vitae/releases).
+
+All my academic publications are listed [here](/publications)
 
 Cheers!

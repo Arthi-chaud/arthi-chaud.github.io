@@ -1,0 +1,157 @@
+---
+---
+<div>
+    <div>
+        <div class="mb-1" style="font-weight: bold;">
+            {{ entry.title }}
+        </div>
+        <div class="mb-1 ">
+            {% assign authors = entry.author_array %}
+            {% if authors %}
+                {% for author in authors %}
+                    {% if forloop.length > 1 %}
+                        {% if forloop.last %}
+                            and
+                        {% elsif forloop.index > 1 %}
+                            ,
+                        {% endif %}
+                    {% endif %}
+                    {% assign is_self = false %}
+                    {% if site.scholar.last_name %}
+                        {% if site.scholar.last_name contains author.last %}
+                            {% assign is_self = true %}
+                        {% endif %}
+                    {% endif %}
+                    {% if is_self %}
+                        <em>
+                        {{ author.first }} {{ author.last }}</em>
+                    {% else %}
+                        {{ author.first }} {{ author.last }}
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                {{ entry.author }}
+            {% endif %}
+        </div>
+        <div>
+            {% if entry.type == "article" and entry.journal %}
+                <em>
+                {{ entry.journal }}</em>
+            {% elsif entry.booktitle %}
+                <em>In {{ entry.booktitle }}</em>
+            {% elsif entry.school %}
+                <em>
+                {{ entry.school }}</em>
+            {% elsif entry.publisher %}
+                <em>
+                {{ entry.publisher }}</em>
+            {% endif %}
+            {% if entry.year %}
+                {% if entry.journal or entry.booktitle or entry.school or entry.publisher %}
+                    ,
+                {% endif %}
+                {{ entry.year }}
+            {% endif %}
+        </div>
+        {% if entry.note %}
+            <div>
+                {{ entry.note }}
+            </div>
+        {% endif %}
+        <div class="mb-4">
+            {% if entry.abstract %}
+                <button
+                class="btn btn-sm z-depth-0"
+                type="button"
+                onclick="
+                var x = document.getElementById('abstract-{{ entry.key }}');
+                x.classList.toggle('hidden');
+                "
+                >
+                Abs
+                </button>
+            {% endif %}
+            {% if entry.code %}
+                <a
+                href="{{ entry.code }}"
+                class="btn btn-sm z-depth-0"
+                target="_blank"
+                rel="noopener"
+                >
+                Code
+                </a>
+            {% endif %}
+            {% if entry.doi %}
+                <a
+                href="https://doi.org/{{ entry.doi }}"
+                class="btn btn-sm z-depth-0"
+                target="_blank"
+                rel="noopener"
+                >
+                DOI
+                </a>
+            {% endif %}
+            {% if entry.arxiv %}
+                <a
+                href="https://arxiv.org/abs/{{ entry.arxiv }}"
+                class="btn btn-sm z-depth-0"
+                target="_blank"
+                rel="noopener"
+                >
+                arXiv
+                </a>
+            {% endif %}
+            {% if entry.pdf %}
+                {% if entry.pdf contains "://" %}
+                    <a
+                    href="{{ entry.pdf }}"
+                    class="btn btn-sm z-depth-0"
+                    target="_blank"
+                    rel="noopener"
+                    >
+                    PDF
+                    </a>
+                {% else %}
+                    <a
+                    href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}"
+                    class="btn btn-sm z-depth-0"
+                    target="_blank"
+                    rel="noopener"
+                    >
+                    PDF
+                    </a>
+                {% endif %}
+            {% endif %}
+            {% if entry.html %}
+                <a
+                href="{{ entry.html }}"
+                class="btn btn-sm z-depth-0"
+                target="_blank"
+                rel="noopener"
+                >
+                HTML
+                </a>
+            {% endif %}
+            {% if entry.slides %}
+                <a
+                href="{{ entry.slides }}"
+                class="btn btn-sm z-depth-0"
+                target="_blank"
+                rel="noopener"
+                >
+                Slides
+                </a>
+            {% endif %}
+            {% if entry.poster %}
+                <a
+                href="{{ entry.poster }}"
+                class="btn btn-sm z-depth-0"
+                target="_blank"
+                rel="noopener"
+                >
+                Poster
+                </a>
+            {% endif %}
+        </div>
+    </div>
+</div>
