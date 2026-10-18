@@ -6,6 +6,9 @@ order: 4
 
 ## 2026
 
+0. Death on the Nile
+: Agatha Christie, 1937
+
 0. The Girl on the Train
 : Paula Hawkins, 2015
 
